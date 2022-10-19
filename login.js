@@ -3,7 +3,7 @@ import { StyleSheet,Text,View,TextInput,StatusBar,Keyboard,TouchableWithoutFeedb
 import { LinearGradient } from 'expo-linear-gradient';
 import { Icon } from 'react-native-elements';
 
-export default function LoginScreen2() {
+export default function LoginScreen() {
   useEffect(() => {
     StatusBar.setBarStyle('light-content', true);
   }, []);
@@ -20,44 +20,27 @@ export default function LoginScreen2() {
       >
         <Text style={styles.welcomeText}>Welcome Back!</Text>
         <Text style={styles.loginText}>Login</Text>
-        <TextInput
-          placeholder='Email Address'
-          placeholderTextColor='#808e9b'
-          style={styles.input}
-          autoCorrect={true}
-          autoCapitalize={false}
-          autoCompleteType='email'
-          keyboardType='email-address'
-          textContentType='emailAddress'
-        />
-        <TextInput
-          placeholder='Password'
-          placeholderTextColor='#808e9b'
-          style={styles.input}
-          secureTextEntry={true}
-          textContentType='password'
-        />
+        <TextInput placeholder='Email Address' placeholderTextColor='#808e9b' style={styles.input}  autoCorrect={true}
+          autoCapitalize={false} autoCompleteType='email' keyboardType='email-address'  textContentType='emailAddress'/>
+        <TextInput  placeholder='Password'  placeholderTextColor='#808e9b' style={styles.input}
+          secureTextEntry={true} textContentType='password' />
+
         <TouchableOpacity>
           <Text style={styles.fpText}>Forgot Password?</Text>
         </TouchableOpacity>
+
         <TouchableOpacity style={styles.loginButton}>
           <Text style={styles.loginButtonText}>Login</Text>
         </TouchableOpacity>
+
         <View style={styles.loginWithBar}>
           <TouchableOpacity style={styles.iconButton}>
             <Icon name='google' type='font-awesome' size={30} color='#808e9b' />
           </TouchableOpacity>
+
           <TouchableOpacity style={styles.iconButton}>
-            <Icon
-              name='facebook-square'
-              type='font-awesome'
-              size={30}
-              color='#808e9b'
-            />
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.iconButton}>
-            <Icon name='apple' type='font-awesome' size={30} color='#808e9b' />
-          </TouchableOpacity>
+            <Icon name='facebook-square' type='font-awesome' size={30}  color='#808e9b'/>
+          </TouchableOpacity> 
         </View>
         <View style={styles.signUpTextView}>
           <Text style={styles.signUpText}>Don't have an account?</Text>
